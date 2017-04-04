@@ -10,7 +10,7 @@ class QuotesStore {
 	 */
 	public function addQuote($quote)
   {
-    $store[] = $quote;
+    $this->store[] = $quote;
   }
 
 	/**

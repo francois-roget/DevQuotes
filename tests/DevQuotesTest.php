@@ -1,6 +1,6 @@
 <?php
-require_once("../src/DevQuote.php");
-require_once("../src/QuotesStore.php");
+require_once(__DIR__ ."/../src/DevQuote.php");
+require_once(__DIR__ ."/../src/QuotesStore.php");
 
 use froget\DevQuotes\DevQuote;
 use froget\DevQuotes\QuotesStore;
