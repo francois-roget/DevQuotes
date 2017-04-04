@@ -1,10 +1,7 @@
 <?php
-require_once(__DIR__ ."/../src/DevQuote.php");
-require_once(__DIR__ ."/../src/QuotesStore.php");
+namespace DevQuotes;
 
-use froget\DevQuotes\DevQuote;
-use froget\DevQuotes\QuotesStore;
-
+use PHPUnit_Framework_TestCase;
 
 class DevQuotesTest extends PHPUnit_Framework_TestCase
 {

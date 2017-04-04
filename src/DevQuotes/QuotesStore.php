@@ -1,5 +1,5 @@
 <?php 
-namespace froget\DevQuotes;
+namespace DevQuotes;
  
 class QuotesStore {
 
