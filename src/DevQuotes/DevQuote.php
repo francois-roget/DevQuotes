@@ -3,22 +3,27 @@ namespace DevQuotes;
  
 class DevQuote {
 
-  private $quote;
+  private $message;
   private $author;
   
   function __construct($message, $author="Unknown") {
-    $this->quote = $message;
+    $this->message = $message;
     $this->author = $author;
   }
  
   public function getMessage()
   {
-    return $this->quote;
+    return $this->message;
   }
 
   public function getAuthor()
   {
   	return $this->author;
+  }
+
+  public function toString()
+  {
+  	return $this->getAuthor() . ':' . $this->getMessage() . PHP_EOL;
   }
  
 }
