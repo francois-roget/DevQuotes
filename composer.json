@@ -6,7 +6,7 @@
   ], 
   "autoload": {
     "psr-4": {
-      "froget\\DevQuotes\\": "src"
+      "froget\\dev-quotes\\": "src"
     }
   }, 
   "description": "Developer quotes", 
@@ -19,7 +19,7 @@
     "Jokes"
   ], 
   "license": "MIT", 
-  "name": "froget/DevQuotes", 
+  "name": "froget/dev-quotes",
   "require": {}, 
   "require-dev": {
     "phpunit/phpunit": "4.5.*"
