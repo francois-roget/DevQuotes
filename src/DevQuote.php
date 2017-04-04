@@ -4,14 +4,21 @@ namespace froget\DevQuotes;
 class DevQuote {
 
   private $quote;
+  private $author;
   
-  function __construct($message) {		
-    $this->quote = $message;		
+  function __construct($message, $author="Unknown") {
+    $this->quote = $message;
+    $this->author = $author;
   }
  
-  public function getQuote()
+  public function getMessage()
   {
     return $this->quote;
+  }
+
+  public function getAuthor()
+  {
+  	return $this->author;
   }
  
 }
