@@ -26,14 +26,9 @@ class DevQuotesTest extends PHPUnit_Framework_TestCase
 
 	public function testDevQuotesStore()
 	{
-		$dquote = new DevQuote($this->message);
-		$store = new QuotesStore();
-		$store->addQuote($dquote);
-
-		$storedQuote = $store->randomQuote();
-
+		$storedQuote = QuotesStore::getInstance()->randomQuote();
+		echo $storedQuote->toString();
 		$this->assertNotNull($storedQuote);
-		$this->assertEquals($this->message, $storedQuote->getMessage());
 	}
 
 }

@@ -1,26 +1,41 @@
-<?php 
-namespace DevQuotes;
- 
-class QuotesStore {
+<?php
 
-  private $store = array();
+namespace DevQuotes;
+
+class QuotesStore
+{
+
+	protected static $instance = null;
+	private $store = array();
+
+	private function __construct()
+	{
+		$str = file_get_contents(__DIR__ . '/quotes.json');
+		$json = json_decode($str, true);
+		foreach ($json as $item) {
+			$this->store[] = new DevQuote($item['text'], $item['author']);
+		}
+	}
 
 	/**
-	 * @param DevQuote
+	 * @return QuotesStore
 	 */
-	public function addQuote($quote)
-  {
-    $this->store[] = $quote;
-  }
+	public static function getInstance()
+	{
+		if (!isset(static::$instance)) {
+			static::$instance = new QuotesStore();
+		}
+		return static::$instance;
+	}
+
 
 	/**
 	 * @return DevQuote
 	 */
 	public function randomQuote()
-  {
-  	if(count($this->store)>0){
-  		return $this->store[0];
-  	}
-  }
- 
+	{
+		$random = array_rand($this->store, 1);
+		return $this->store[$random];
+	}
+
 }

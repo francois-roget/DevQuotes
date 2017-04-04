@@ -23,7 +23,7 @@ class DevQuote {
 
   public function toString()
   {
-  	return $this->getAuthor() . ':' . $this->getMessage() . PHP_EOL;
+  	return $this->getAuthor() . ': ' . $this->getMessage() . PHP_EOL;
   }
  
 }
