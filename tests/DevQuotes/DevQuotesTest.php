@@ -13,7 +13,7 @@ class DevQuotesTest extends PHPUnit_Framework_TestCase
 		$dquote = new DevQuote($this->message);
 
 		$this->assertEquals($this->message, $dquote->getMessage());
-		$this->assertEquals("Unknown", $dquote->getAuthor());
+		$this->assertEquals("(Unknown)", $dquote->getAuthor());
 	}
 
 	public function testDevQuoteMessage()
