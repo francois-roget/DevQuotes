@@ -6,7 +6,7 @@ class DevQuote {
   private $message;
   private $author;
   
-  function __construct($message, $author="Unknown") {
+  function __construct($message, $author="(Unknown)") {
     $this->message = $message;
     $this->author = $author;
   }
